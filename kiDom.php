@@ -1719,7 +1719,8 @@ abstract class kiNode
 						"limit"=>$limit,
 					);
 					$child->tagTreeUl($item["children"],$param);
-					if ($limit==0 OR $level<=$limit) {$this->append($child);}
+					//if ($limit==0 OR $level<=$limit) {$this->append($child);}
+                    if ($level<=$limit) {$this->append($child);}
 					$level--;
 				}
 			
